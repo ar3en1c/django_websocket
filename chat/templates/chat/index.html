@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+    چت بات
+{% endblock %}
+{% block head_attr %}
+    <link rel="stylesheet" href="{% static 'main.css' %}">
+{% endblock %}
+{% block body %}
+    <div class="cont">
+        <div class="inp-fath">
+            <input id="messageInput" type="text" placeholder="پیام خود را وارد کنید..."/>
+            <button onclick="sendMessage()">ارسال</button>
+        </div>
+        <ul id="messages"></ul>
+    </div>
+{% endblock %}
+{% block extra_js %}
+    <script src="{% static 'main.js' %}"></script>
+{% endblock %}
